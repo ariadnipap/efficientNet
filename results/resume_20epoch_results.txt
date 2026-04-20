@@ -1,0 +1,310 @@
+04-20 09:02:45 | starting new experiment
+04-20 09:02:52 | Namespace(spectrogram_dir='/home/ubuntu/data/spectrograms', json_dir='/home/ubuntu/data', geo_model_weights='', log_dir='./logs', seed=0, epochs=20, model='efficientnet_b0', optim='nesterov', lr=0.005, wd=1e-05, batch_size=128, eval_freq=5, exp_name='efficientnet_b0_resume', model_weight='./logs/efficientnet_b0_run/mixup/pretrained/sound_aug/efficientnet_b0/nesterov_b128_lr0.05_wd1e-05/train/2/checkpoints/checkpoint_29.pt', encoder_weight='', mode='train', mixup=True, pretrained=False, sound_aug=True, loss='ce', multilabel=False, geo_model=False, geo_threshold=0.1, no_masking=False, mean_teacher=False)
+04-20 09:13:55 | Epoch   0 | train set | LR 5.0000E-03 | Loss 3.3037 | Acc 50.19
+04-20 09:24:17 | Epoch   1 | train set | LR 4.9723E-03 | Loss 3.2897 | Acc 50.77
+04-20 09:42:56 | Epoch   2 | train set | LR 4.8899E-03 | Loss 3.2742 | Acc 50.73
+04-20 10:13:03 | Epoch   3 | train set | LR 4.7548E-03 | Loss 3.2545 | Acc 50.84
+04-20 10:26:42 | Epoch   4 | train set | LR 4.5703E-03 | Loss 3.2399 | Acc 51.13
+04-20 10:53:32 | Epoch   4 | val set | LR 4.5703E-03 | Loss 3.0298 | Acc 47.86
+04-20 10:53:32 | 
+sound_avg-level
+|  mAP: 65.36%
+|  F1-max: 67.81%
+|  ROC-AUC: 99.25%
+|  class-avg-top-1: 54.50%
+|  class-avg-top-5: 75.59%
+|  simple-top-1: 68.39%
+|  simple-top-5: 86.71%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 95.20%
+|  |  taxa_class(5)_acc: 79.49%
+|  |  taxa_order(35)_acc: 64.79%
+|  |  taxa_family(175)_acc: 61.40%
+|  |  taxa_genus(633)_acc: 57.84%
+|  |  taxa_specific_epithet(1212)_acc: 54.50%
+sound_max-level
+|  mAP: 61.22%
+|  F1-max: 64.74%
+|  ROC-AUC: 99.05%
+|  class-avg-top-1: 54.08%
+|  class-avg-top-5: 75.51%
+|  simple-top-1: 67.90%
+|  simple-top-5: 86.55%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 94.61%
+|  |  taxa_class(5)_acc: 78.68%
+|  |  taxa_order(35)_acc: 64.92%
+|  |  taxa_family(175)_acc: 61.05%
+|  |  taxa_genus(633)_acc: 57.48%
+|  |  taxa_specific_epithet(1212)_acc: 54.08%
+window-level
+|  class-avg-top-1: 38.00%
+|  class-avg-top-5: 55.22%
+|  simple-top-1: 46.50%
+|  simple-top-5: 62.72%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 90.64%
+|  |  taxa_class(5)_acc: 68.15%
+|  |  taxa_order(35)_acc: 48.18%
+|  |  taxa_family(175)_acc: 43.39%
+|  |  taxa_genus(633)_acc: 40.75%
+|  |  taxa_specific_epithet(1212)_acc: 38.00%
+
+04-20 11:02:55 | Epoch   5 | train set | LR 4.3410E-03 | Loss 3.2173 | Acc 51.47
+04-20 11:12:37 | Epoch   6 | train set | LR 4.0725E-03 | Loss 3.2011 | Acc 51.81
+04-20 11:23:48 | Epoch   7 | train set | LR 3.7715E-03 | Loss 3.1849 | Acc 51.96
+04-20 11:38:18 | Epoch   8 | train set | LR 3.4453E-03 | Loss 3.1892 | Acc 52.09
+04-20 11:47:38 | Epoch   9 | train set | LR 3.1020E-03 | Loss 3.1267 | Acc 53.13
+04-20 12:14:58 | Epoch   9 | val set | LR 3.1020E-03 | Loss 3.0275 | Acc 47.86
+04-20 12:14:58 | 
+sound_avg-level
+|  mAP: 65.64%
+|  F1-max: 68.09%
+|  ROC-AUC: 99.26%
+|  class-avg-top-1: 54.71%
+|  class-avg-top-5: 75.90%
+|  simple-top-1: 68.64%
+|  simple-top-5: 86.92%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 95.03%
+|  |  taxa_class(5)_acc: 79.26%
+|  |  taxa_order(35)_acc: 64.58%
+|  |  taxa_family(175)_acc: 61.18%
+|  |  taxa_genus(633)_acc: 58.15%
+|  |  taxa_specific_epithet(1212)_acc: 54.71%
+sound_max-level
+|  mAP: 61.32%
+|  F1-max: 64.86%
+|  ROC-AUC: 99.06%
+|  class-avg-top-1: 54.32%
+|  class-avg-top-5: 75.76%
+|  simple-top-1: 68.17%
+|  simple-top-5: 86.73%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 94.47%
+|  |  taxa_class(5)_acc: 79.26%
+|  |  taxa_order(35)_acc: 64.68%
+|  |  taxa_family(175)_acc: 60.95%
+|  |  taxa_genus(633)_acc: 57.47%
+|  |  taxa_specific_epithet(1212)_acc: 54.32%
+window-level
+|  class-avg-top-1: 38.00%
+|  class-avg-top-5: 55.28%
+|  simple-top-1: 46.52%
+|  simple-top-5: 62.83%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 90.32%
+|  |  taxa_class(5)_acc: 67.90%
+|  |  taxa_order(35)_acc: 48.01%
+|  |  taxa_family(175)_acc: 43.25%
+|  |  taxa_genus(633)_acc: 40.72%
+|  |  taxa_specific_epithet(1212)_acc: 38.00%
+
+04-20 12:27:44 | Epoch  10 | train set | LR 2.7500E-03 | Loss 3.1125 | Acc 53.06
+04-20 12:37:00 | Epoch  11 | train set | LR 2.3980E-03 | Loss 3.1400 | Acc 52.93
+04-20 12:49:30 | Epoch  12 | train set | LR 2.0547E-03 | Loss 3.1167 | Acc 53.33
+04-20 12:59:39 | Epoch  13 | train set | LR 1.7285E-03 | Loss 3.1233 | Acc 53.30
+04-20 13:08:43 | Epoch  14 | train set | LR 1.4275E-03 | Loss 3.1100 | Acc 53.48
+04-20 13:36:08 | Epoch  14 | val set | LR 1.4275E-03 | Loss 3.0157 | Acc 48.11
+04-20 13:36:08 | 
+sound_avg-level
+|  mAP: 65.95%
+|  F1-max: 68.32%
+|  ROC-AUC: 99.27%
+|  class-avg-top-1: 55.24%
+|  class-avg-top-5: 76.47%
+|  simple-top-1: 68.94%
+|  simple-top-5: 87.19%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 94.92%
+|  |  taxa_class(5)_acc: 80.01%
+|  |  taxa_order(35)_acc: 65.36%
+|  |  taxa_family(175)_acc: 62.11%
+|  |  taxa_genus(633)_acc: 58.82%
+|  |  taxa_specific_epithet(1212)_acc: 55.24%
+sound_max-level
+|  mAP: 61.55%
+|  F1-max: 65.14%
+|  ROC-AUC: 99.07%
+|  class-avg-top-1: 54.69%
+|  class-avg-top-5: 76.26%
+|  simple-top-1: 68.39%
+|  simple-top-5: 86.93%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 94.32%
+|  |  taxa_class(5)_acc: 79.79%
+|  |  taxa_order(35)_acc: 65.71%
+|  |  taxa_family(175)_acc: 61.35%
+|  |  taxa_genus(633)_acc: 58.15%
+|  |  taxa_specific_epithet(1212)_acc: 54.69%
+window-level
+|  class-avg-top-1: 38.31%
+|  class-avg-top-5: 55.53%
+|  simple-top-1: 46.77%
+|  simple-top-5: 62.97%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 90.19%
+|  |  taxa_class(5)_acc: 68.08%
+|  |  taxa_order(35)_acc: 48.35%
+|  |  taxa_family(175)_acc: 43.58%
+|  |  taxa_genus(633)_acc: 41.06%
+|  |  taxa_specific_epithet(1212)_acc: 38.31%
+
+04-20 13:45:36 | Epoch  15 | train set | LR 1.1590E-03 | Loss 3.0501 | Acc 54.21
+04-20 13:54:14 | Epoch  16 | train set | LR 9.2971E-04 | Loss 3.1272 | Acc 53.25
+04-20 14:02:52 | Epoch  17 | train set | LR 7.4524E-04 | Loss 3.0815 | Acc 53.81
+04-20 14:28:18 | Epoch  18 | train set | LR 6.1012E-04 | Loss 3.0870 | Acc 53.78
+04-20 14:39:03 | Epoch  19 | train set | LR 5.2770E-04 | Loss 3.0802 | Acc 54.02
+04-20 15:06:06 | Epoch  19 | val set | LR 5.2770E-04 | Loss 3.0317 | Acc 47.98
+04-20 15:06:06 | 
+sound_avg-level
+|  mAP: 65.72%
+|  F1-max: 68.15%
+|  ROC-AUC: 99.26%
+|  class-avg-top-1: 54.92%
+|  class-avg-top-5: 76.16%
+|  simple-top-1: 68.77%
+|  simple-top-5: 87.03%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 95.03%
+|  |  taxa_class(5)_acc: 79.62%
+|  |  taxa_order(35)_acc: 65.02%
+|  |  taxa_family(175)_acc: 61.71%
+|  |  taxa_genus(633)_acc: 58.43%
+|  |  taxa_specific_epithet(1212)_acc: 54.92%
+sound_max-level
+|  mAP: 61.17%
+|  F1-max: 64.93%
+|  ROC-AUC: 99.06%
+|  class-avg-top-1: 54.28%
+|  class-avg-top-5: 75.89%
+|  simple-top-1: 68.16%
+|  simple-top-5: 86.80%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 94.46%
+|  |  taxa_class(5)_acc: 78.77%
+|  |  taxa_order(35)_acc: 64.78%
+|  |  taxa_family(175)_acc: 60.94%
+|  |  taxa_genus(633)_acc: 57.55%
+|  |  taxa_specific_epithet(1212)_acc: 54.28%
+window-level
+|  class-avg-top-1: 38.08%
+|  class-avg-top-5: 55.33%
+|  simple-top-1: 46.65%
+|  simple-top-5: 62.89%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 90.46%
+|  |  taxa_class(5)_acc: 67.91%
+|  |  taxa_order(35)_acc: 48.17%
+|  |  taxa_family(175)_acc: 43.33%
+|  |  taxa_genus(633)_acc: 40.79%
+|  |  taxa_specific_epithet(1212)_acc: 38.08%
+
+04-20 15:06:06 | Best Val: Epoch 14, Best metrics
+04-20 15:06:06 | 
+sound_avg-level
+|  mAP: 65.95%
+|  F1-max: 68.32%
+|  ROC-AUC: 99.27%
+|  class-avg-top-1: 55.24%
+|  class-avg-top-5: 76.47%
+|  simple-top-1: 68.94%
+|  simple-top-5: 87.19%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 94.92%
+|  |  taxa_class(5)_acc: 80.01%
+|  |  taxa_order(35)_acc: 65.36%
+|  |  taxa_family(175)_acc: 62.11%
+|  |  taxa_genus(633)_acc: 58.82%
+|  |  taxa_specific_epithet(1212)_acc: 55.24%
+sound_max-level
+|  mAP: 61.55%
+|  F1-max: 65.14%
+|  ROC-AUC: 99.07%
+|  class-avg-top-1: 54.69%
+|  class-avg-top-5: 76.26%
+|  simple-top-1: 68.39%
+|  simple-top-5: 86.93%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 94.32%
+|  |  taxa_class(5)_acc: 79.79%
+|  |  taxa_order(35)_acc: 65.71%
+|  |  taxa_family(175)_acc: 61.35%
+|  |  taxa_genus(633)_acc: 58.15%
+|  |  taxa_specific_epithet(1212)_acc: 54.69%
+window-level
+|  class-avg-top-1: 38.31%
+|  class-avg-top-5: 55.53%
+|  simple-top-1: 46.77%
+|  simple-top-5: 62.97%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 90.19%
+|  |  taxa_class(5)_acc: 68.08%
+|  |  taxa_order(35)_acc: 48.35%
+|  |  taxa_family(175)_acc: 43.58%
+|  |  taxa_genus(633)_acc: 41.06%
+|  |  taxa_specific_epithet(1212)_acc: 38.31%
+
+04-20 15:35:20 | Epoch  14 | test set | LR 5.2770E-04 | Loss 3.1636 | Acc 46.29
+04-20 15:35:20 | 
+sound_avg-level
+|  mAP: 65.82%
+|  F1-max: 67.89%
+|  ROC-AUC: 99.16%
+|  class-avg-top-1: 54.82%
+|  class-avg-top-5: 75.98%
+|  simple-top-1: 67.57%
+|  simple-top-5: 86.28%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 93.42%
+|  |  taxa_class(5)_acc: 75.02%
+|  |  taxa_order(35)_acc: 64.26%
+|  |  taxa_family(175)_acc: 61.24%
+|  |  taxa_genus(633)_acc: 58.25%
+|  |  taxa_specific_epithet(1212)_acc: 54.82%
+sound_max-level
+|  mAP: 61.85%
+|  F1-max: 65.02%
+|  ROC-AUC: 98.97%
+|  class-avg-top-1: 54.32%
+|  class-avg-top-5: 75.70%
+|  simple-top-1: 67.14%
+|  simple-top-5: 86.20%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 92.68%
+|  |  taxa_class(5)_acc: 75.16%
+|  |  taxa_order(35)_acc: 64.54%
+|  |  taxa_family(175)_acc: 60.82%
+|  |  taxa_genus(633)_acc: 57.81%
+|  |  taxa_specific_epithet(1212)_acc: 54.32%
+window-level
+|  class-avg-top-1: 37.45%
+|  class-avg-top-5: 54.42%
+|  simple-top-1: 44.97%
+|  simple-top-5: 61.20%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 89.21%
+|  |  taxa_class(5)_acc: 65.04%
+|  |  taxa_order(35)_acc: 45.64%
+|  |  taxa_family(175)_acc: 42.69%
+|  |  taxa_genus(633)_acc: 39.96%
+|  |  taxa_specific_epithet(1212)_acc: 37.45%
+
