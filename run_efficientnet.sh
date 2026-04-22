@@ -10,7 +10,7 @@ python main.py \
     --lr 0.05 \
     --wd 1e-5 \
     --batch_size 128 \
-    --epochs 30 \
+    --epochs 50 \
     --eval_freq 5 \
     --pretrained \
     --mixup \
