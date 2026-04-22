@@ -1,0 +1,1171 @@
+04-20 20:12:40 | starting new experiment
+04-20 20:12:44 | Number of classes: 5569
+04-20 20:12:45 | EfficientNet(
+  (features): Sequential(
+    (0): Conv2dNormActivation(
+      (0): Conv2d(3, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): SiLU(inplace=True)
+    )
+    (1): Sequential(
+      (0): MBConv(
+        (block): Sequential(
+          (0): Conv2dNormActivation(
+            (0): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=32, bias=False)
+            (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): SiLU(inplace=True)
+          )
+          (1): SqueezeExcitation(
+            (avgpool): AdaptiveAvgPool2d(output_size=1)
+            (fc1): Conv2d(32, 8, kernel_size=(1, 1), stride=(1, 1))
+            (fc2): Conv2d(8, 32, kernel_size=(1, 1), stride=(1, 1))
+            (activation): SiLU(inplace=True)
+            (scale_activation): Sigmoid()
+          )
+          (2): Conv2dNormActivation(
+            (0): Conv2d(32, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (stochastic_depth): StochasticDepth(p=0.0, mode=row)
+      )
+    )
+    (2): Sequential(
+      (0): MBConv(
+        (block): Sequential(
+          (0): Conv2dNormActivation(
+            (0): Conv2d(16, 96, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): SiLU(inplace=True)
+          )
+          (1): Conv2dNormActivation(
+            (0): Conv2d(96, 96, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=96, bias=False)
+            (1): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): SiLU(inplace=True)
+          )
+          (2): SqueezeExcitation(
+            (avgpool): AdaptiveAvgPool2d(output_size=1)
+            (fc1): Conv2d(96, 4, kernel_size=(1, 1), stride=(1, 1))
+            (fc2): Conv2d(4, 96, kernel_size=(1, 1), stride=(1, 1))
+            (activation): SiLU(inplace=True)
+            (scale_activation): Sigmoid()
+          )
+          (3): Conv2dNormActivation(
+            (0): Conv2d(96, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (stochastic_depth): StochasticDepth(p=0.0125, mode=row)
+      )
+      (1): MBConv(
+        (block): Sequential(
+          (0): Conv2dNormActivation(
+            (0): Conv2d(24, 144, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm2d(144, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): SiLU(inplace=True)
+          )
+          (1): Conv2dNormActivation(
+            (0): Conv2d(144, 144, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=144, bias=False)
+            (1): BatchNorm2d(144, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): SiLU(inplace=True)
+          )
+          (2): SqueezeExcitation(
+            (avgpool): AdaptiveAvgPool2d(output_size=1)
+            (fc1): Conv2d(144, 6, kernel_size=(1, 1), stride=(1, 1))
+            (fc2): Conv2d(6, 144, kernel_size=(1, 1), stride=(1, 1))
+            (activation): SiLU(inplace=True)
+            (scale_activation): Sigmoid()
+          )
+          (3): Conv2dNormActivation(
+            (0): Conv2d(144, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm2d(24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (stochastic_depth): StochasticDepth(p=0.025, mode=row)
+      )
+    )
+    (3): Sequential(
+      (0): MBConv(
+        (block): Sequential(
+          (0): Conv2dNormActivation(
+            (0): Conv2d(24, 144, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm2d(144, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): SiLU(inplace=True)
+          )
+          (1): Conv2dNormActivation(
+            (0): Conv2d(144, 144, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), groups=144, bias=False)
+            (1): BatchNorm2d(144, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): SiLU(inplace=True)
+          )
+          (2): SqueezeExcitation(
+            (avgpool): AdaptiveAvgPool2d(output_size=1)
+            (fc1): Conv2d(144, 6, kernel_size=(1, 1), stride=(1, 1))
+            (fc2): Conv2d(6, 144, kernel_size=(1, 1), stride=(1, 1))
+            (activation): SiLU(inplace=True)
+            (scale_activation): Sigmoid()
+          )
+          (3): Conv2dNormActivation(
+            (0): Conv2d(144, 40, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm2d(40, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (stochastic_depth): StochasticDepth(p=0.037500000000000006, mode=row)
+      )
+      (1): MBConv(
+        (block): Sequential(
+          (0): Conv2dNormActivation(
+            (0): Conv2d(40, 240, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm2d(240, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): SiLU(inplace=True)
+          )
+          (1): Conv2dNormActivation(
+            (0): Conv2d(240, 240, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=240, bias=False)
+            (1): BatchNorm2d(240, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): SiLU(inplace=True)
+          )
+          (2): SqueezeExcitation(
+            (avgpool): AdaptiveAvgPool2d(output_size=1)
+            (fc1): Conv2d(240, 10, kernel_size=(1, 1), stride=(1, 1))
+            (fc2): Conv2d(10, 240, kernel_size=(1, 1), stride=(1, 1))
+            (activation): SiLU(inplace=True)
+            (scale_activation): Sigmoid()
+          )
+          (3): Conv2dNormActivation(
+            (0): Conv2d(240, 40, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm2d(40, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (stochastic_depth): StochasticDepth(p=0.05, mode=row)
+      )
+    )
+    (4): Sequential(
+      (0): MBConv(
+        (block): Sequential(
+          (0): Conv2dNormActivation(
+            (0): Conv2d(40, 240, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm2d(240, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): SiLU(inplace=True)
+          )
+          (1): Conv2dNormActivation(
+            (0): Conv2d(240, 240, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=240, bias=False)
+            (1): BatchNorm2d(240, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): SiLU(inplace=True)
+          )
+          (2): SqueezeExcitation(
+            (avgpool): AdaptiveAvgPool2d(output_size=1)
+            (fc1): Conv2d(240, 10, kernel_size=(1, 1), stride=(1, 1))
+            (fc2): Conv2d(10, 240, kernel_size=(1, 1), stride=(1, 1))
+            (activation): SiLU(inplace=True)
+            (scale_activation): Sigmoid()
+          )
+          (3): Conv2dNormActivation(
+            (0): Conv2d(240, 80, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm2d(80, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (stochastic_depth): StochasticDepth(p=0.0625, mode=row)
+      )
+      (1): MBConv(
+        (block): Sequential(
+          (0): Conv2dNormActivation(
+            (0): Conv2d(80, 480, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm2d(480, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): SiLU(inplace=True)
+          )
+          (1): Conv2dNormActivation(
+            (0): Conv2d(480, 480, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=480, bias=False)
+            (1): BatchNorm2d(480, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): SiLU(inplace=True)
+          )
+          (2): SqueezeExcitation(
+            (avgpool): AdaptiveAvgPool2d(output_size=1)
+            (fc1): Conv2d(480, 20, kernel_size=(1, 1), stride=(1, 1))
+            (fc2): Conv2d(20, 480, kernel_size=(1, 1), stride=(1, 1))
+            (activation): SiLU(inplace=True)
+            (scale_activation): Sigmoid()
+          )
+          (3): Conv2dNormActivation(
+            (0): Conv2d(480, 80, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm2d(80, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (stochastic_depth): StochasticDepth(p=0.07500000000000001, mode=row)
+      )
+      (2): MBConv(
+        (block): Sequential(
+          (0): Conv2dNormActivation(
+            (0): Conv2d(80, 480, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm2d(480, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): SiLU(inplace=True)
+          )
+          (1): Conv2dNormActivation(
+            (0): Conv2d(480, 480, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=480, bias=False)
+            (1): BatchNorm2d(480, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): SiLU(inplace=True)
+          )
+          (2): SqueezeExcitation(
+            (avgpool): AdaptiveAvgPool2d(output_size=1)
+            (fc1): Conv2d(480, 20, kernel_size=(1, 1), stride=(1, 1))
+            (fc2): Conv2d(20, 480, kernel_size=(1, 1), stride=(1, 1))
+            (activation): SiLU(inplace=True)
+            (scale_activation): Sigmoid()
+          )
+          (3): Conv2dNormActivation(
+            (0): Conv2d(480, 80, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm2d(80, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (stochastic_depth): StochasticDepth(p=0.08750000000000001, mode=row)
+      )
+    )
+    (5): Sequential(
+      (0): MBConv(
+        (block): Sequential(
+          (0): Conv2dNormActivation(
+            (0): Conv2d(80, 480, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm2d(480, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): SiLU(inplace=True)
+          )
+          (1): Conv2dNormActivation(
+            (0): Conv2d(480, 480, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=480, bias=False)
+            (1): BatchNorm2d(480, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): SiLU(inplace=True)
+          )
+          (2): SqueezeExcitation(
+            (avgpool): AdaptiveAvgPool2d(output_size=1)
+            (fc1): Conv2d(480, 20, kernel_size=(1, 1), stride=(1, 1))
+            (fc2): Conv2d(20, 480, kernel_size=(1, 1), stride=(1, 1))
+            (activation): SiLU(inplace=True)
+            (scale_activation): Sigmoid()
+          )
+          (3): Conv2dNormActivation(
+            (0): Conv2d(480, 112, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm2d(112, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (stochastic_depth): StochasticDepth(p=0.1, mode=row)
+      )
+      (1): MBConv(
+        (block): Sequential(
+          (0): Conv2dNormActivation(
+            (0): Conv2d(112, 672, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm2d(672, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): SiLU(inplace=True)
+          )
+          (1): Conv2dNormActivation(
+            (0): Conv2d(672, 672, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=672, bias=False)
+            (1): BatchNorm2d(672, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): SiLU(inplace=True)
+          )
+          (2): SqueezeExcitation(
+            (avgpool): AdaptiveAvgPool2d(output_size=1)
+            (fc1): Conv2d(672, 28, kernel_size=(1, 1), stride=(1, 1))
+            (fc2): Conv2d(28, 672, kernel_size=(1, 1), stride=(1, 1))
+            (activation): SiLU(inplace=True)
+            (scale_activation): Sigmoid()
+          )
+          (3): Conv2dNormActivation(
+            (0): Conv2d(672, 112, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm2d(112, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (stochastic_depth): StochasticDepth(p=0.1125, mode=row)
+      )
+      (2): MBConv(
+        (block): Sequential(
+          (0): Conv2dNormActivation(
+            (0): Conv2d(112, 672, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm2d(672, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): SiLU(inplace=True)
+          )
+          (1): Conv2dNormActivation(
+            (0): Conv2d(672, 672, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=672, bias=False)
+            (1): BatchNorm2d(672, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): SiLU(inplace=True)
+          )
+          (2): SqueezeExcitation(
+            (avgpool): AdaptiveAvgPool2d(output_size=1)
+            (fc1): Conv2d(672, 28, kernel_size=(1, 1), stride=(1, 1))
+            (fc2): Conv2d(28, 672, kernel_size=(1, 1), stride=(1, 1))
+            (activation): SiLU(inplace=True)
+            (scale_activation): Sigmoid()
+          )
+          (3): Conv2dNormActivation(
+            (0): Conv2d(672, 112, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm2d(112, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (stochastic_depth): StochasticDepth(p=0.125, mode=row)
+      )
+    )
+    (6): Sequential(
+      (0): MBConv(
+        (block): Sequential(
+          (0): Conv2dNormActivation(
+            (0): Conv2d(112, 672, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm2d(672, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): SiLU(inplace=True)
+          )
+          (1): Conv2dNormActivation(
+            (0): Conv2d(672, 672, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), groups=672, bias=False)
+            (1): BatchNorm2d(672, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): SiLU(inplace=True)
+          )
+          (2): SqueezeExcitation(
+            (avgpool): AdaptiveAvgPool2d(output_size=1)
+            (fc1): Conv2d(672, 28, kernel_size=(1, 1), stride=(1, 1))
+            (fc2): Conv2d(28, 672, kernel_size=(1, 1), stride=(1, 1))
+            (activation): SiLU(inplace=True)
+            (scale_activation): Sigmoid()
+          )
+          (3): Conv2dNormActivation(
+            (0): Conv2d(672, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (stochastic_depth): StochasticDepth(p=0.1375, mode=row)
+      )
+      (1): MBConv(
+        (block): Sequential(
+          (0): Conv2dNormActivation(
+            (0): Conv2d(192, 1152, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm2d(1152, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): SiLU(inplace=True)
+          )
+          (1): Conv2dNormActivation(
+            (0): Conv2d(1152, 1152, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=1152, bias=False)
+            (1): BatchNorm2d(1152, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): SiLU(inplace=True)
+          )
+          (2): SqueezeExcitation(
+            (avgpool): AdaptiveAvgPool2d(output_size=1)
+            (fc1): Conv2d(1152, 48, kernel_size=(1, 1), stride=(1, 1))
+            (fc2): Conv2d(48, 1152, kernel_size=(1, 1), stride=(1, 1))
+            (activation): SiLU(inplace=True)
+            (scale_activation): Sigmoid()
+          )
+          (3): Conv2dNormActivation(
+            (0): Conv2d(1152, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (stochastic_depth): StochasticDepth(p=0.15000000000000002, mode=row)
+      )
+      (2): MBConv(
+        (block): Sequential(
+          (0): Conv2dNormActivation(
+            (0): Conv2d(192, 1152, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm2d(1152, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): SiLU(inplace=True)
+          )
+          (1): Conv2dNormActivation(
+            (0): Conv2d(1152, 1152, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=1152, bias=False)
+            (1): BatchNorm2d(1152, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): SiLU(inplace=True)
+          )
+          (2): SqueezeExcitation(
+            (avgpool): AdaptiveAvgPool2d(output_size=1)
+            (fc1): Conv2d(1152, 48, kernel_size=(1, 1), stride=(1, 1))
+            (fc2): Conv2d(48, 1152, kernel_size=(1, 1), stride=(1, 1))
+            (activation): SiLU(inplace=True)
+            (scale_activation): Sigmoid()
+          )
+          (3): Conv2dNormActivation(
+            (0): Conv2d(1152, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (stochastic_depth): StochasticDepth(p=0.1625, mode=row)
+      )
+      (3): MBConv(
+        (block): Sequential(
+          (0): Conv2dNormActivation(
+            (0): Conv2d(192, 1152, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm2d(1152, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): SiLU(inplace=True)
+          )
+          (1): Conv2dNormActivation(
+            (0): Conv2d(1152, 1152, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=1152, bias=False)
+            (1): BatchNorm2d(1152, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): SiLU(inplace=True)
+          )
+          (2): SqueezeExcitation(
+            (avgpool): AdaptiveAvgPool2d(output_size=1)
+            (fc1): Conv2d(1152, 48, kernel_size=(1, 1), stride=(1, 1))
+            (fc2): Conv2d(48, 1152, kernel_size=(1, 1), stride=(1, 1))
+            (activation): SiLU(inplace=True)
+            (scale_activation): Sigmoid()
+          )
+          (3): Conv2dNormActivation(
+            (0): Conv2d(1152, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (stochastic_depth): StochasticDepth(p=0.17500000000000002, mode=row)
+      )
+    )
+    (7): Sequential(
+      (0): MBConv(
+        (block): Sequential(
+          (0): Conv2dNormActivation(
+            (0): Conv2d(192, 1152, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm2d(1152, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): SiLU(inplace=True)
+          )
+          (1): Conv2dNormActivation(
+            (0): Conv2d(1152, 1152, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=1152, bias=False)
+            (1): BatchNorm2d(1152, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): SiLU(inplace=True)
+          )
+          (2): SqueezeExcitation(
+            (avgpool): AdaptiveAvgPool2d(output_size=1)
+            (fc1): Conv2d(1152, 48, kernel_size=(1, 1), stride=(1, 1))
+            (fc2): Conv2d(48, 1152, kernel_size=(1, 1), stride=(1, 1))
+            (activation): SiLU(inplace=True)
+            (scale_activation): Sigmoid()
+          )
+          (3): Conv2dNormActivation(
+            (0): Conv2d(1152, 320, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (1): BatchNorm2d(320, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (stochastic_depth): StochasticDepth(p=0.1875, mode=row)
+      )
+    )
+    (8): Conv2dNormActivation(
+      (0): Conv2d(320, 1280, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (1): BatchNorm2d(1280, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): SiLU(inplace=True)
+    )
+  )
+  (avgpool): AdaptiveAvgPool2d(output_size=1)
+  (classifier): Sequential(
+    (0): Dropout(p=0.2, inplace=True)
+    (1): Linear(in_features=1280, out_features=5569, bias=True)
+  )
+)
+04-20 20:12:45 | Namespace(spectrogram_dir='/home/ubuntu/data/spectrograms', json_dir='/home/ubuntu/data', geo_model_weights='', log_dir='./logs', seed=0, epochs=50, model='efficientnet_b0', optim='nesterov', lr=0.05, wd=1e-05, batch_size=128, eval_freq=5, exp_name='efficientnet_b0_run', model_weight='', encoder_weight='', mode='train', mixup=True, pretrained=True, sound_aug=True, loss='ce', multilabel=False, geo_model=False, geo_threshold=0.1, no_masking=False, mean_teacher=False)
+04-20 20:19:54 | Epoch   0 | train set | LR 5.0000E-03 | Loss 7.0627 | Acc 1.69
+04-20 20:26:41 | Epoch   1 | train set | LR 1.4000E-02 | Loss 6.0461 | Acc 10.47
+04-20 20:33:23 | Epoch   2 | train set | LR 2.3000E-02 | Loss 5.4393 | Acc 19.59
+04-20 20:40:10 | Epoch   3 | train set | LR 3.2000E-02 | Loss 5.0919 | Acc 24.78
+04-20 20:47:08 | Epoch   4 | train set | LR 4.1000E-02 | Loss 4.8760 | Acc 27.99
+04-20 21:07:59 | Epoch   4 | val set | LR 4.1000E-02 | Loss 4.1797 | Acc 28.68
+04-20 21:07:59 | 
+sound_avg-level
+|  mAP: 37.72%
+|  F1-max: 43.80%
+|  ROC-AUC: 97.54%
+|  class-avg-top-1: 23.68%
+|  class-avg-top-5: 40.90%
+|  simple-top-1: 42.59%
+|  simple-top-5: 63.91%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 90.23%
+|  |  taxa_class(5)_acc: 64.44%
+|  |  taxa_order(35)_acc: 35.92%
+|  |  taxa_family(175)_acc: 29.80%
+|  |  taxa_genus(633)_acc: 26.17%
+|  |  taxa_specific_epithet(1212)_acc: 23.68%
+sound_max-level
+|  mAP: 37.09%
+|  F1-max: 43.74%
+|  ROC-AUC: 97.15%
+|  class-avg-top-1: 22.45%
+|  class-avg-top-5: 39.58%
+|  simple-top-1: 40.99%
+|  simple-top-5: 63.07%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 89.25%
+|  |  taxa_class(5)_acc: 64.08%
+|  |  taxa_order(35)_acc: 35.17%
+|  |  taxa_family(175)_acc: 28.09%
+|  |  taxa_genus(633)_acc: 24.90%
+|  |  taxa_specific_epithet(1212)_acc: 22.45%
+window-level
+|  class-avg-top-1: 16.44%
+|  class-avg-top-5: 30.38%
+|  simple-top-1: 27.48%
+|  simple-top-5: 44.43%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 85.81%
+|  |  taxa_class(5)_acc: 55.53%
+|  |  taxa_order(35)_acc: 27.47%
+|  |  taxa_family(175)_acc: 20.62%
+|  |  taxa_genus(633)_acc: 18.28%
+|  |  taxa_specific_epithet(1212)_acc: 16.44%
+
+04-20 21:14:45 | Epoch   5 | train set | LR 5.0000E-02 | Loss 4.7069 | Acc 30.05
+04-20 21:21:48 | Epoch   6 | train set | LR 4.9945E-02 | Loss 4.5295 | Acc 32.80
+04-20 21:28:08 | Epoch   7 | train set | LR 4.9781E-02 | Loss 4.3960 | Acc 34.35
+04-20 21:34:27 | Epoch   8 | train set | LR 4.9508E-02 | Loss 4.3021 | Acc 35.57
+04-20 21:40:45 | Epoch   9 | train set | LR 4.9128E-02 | Loss 4.1745 | Acc 37.49
+04-20 22:01:40 | Epoch   9 | val set | LR 4.9128E-02 | Loss 3.5766 | Acc 38.19
+04-20 22:01:40 | 
+sound_avg-level
+|  mAP: 52.55%
+|  F1-max: 57.16%
+|  ROC-AUC: 98.67%
+|  class-avg-top-1: 38.80%
+|  class-avg-top-5: 60.50%
+|  simple-top-1: 56.44%
+|  simple-top-5: 77.51%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 92.24%
+|  |  taxa_class(5)_acc: 73.71%
+|  |  taxa_order(35)_acc: 49.41%
+|  |  taxa_family(175)_acc: 46.37%
+|  |  taxa_genus(633)_acc: 42.44%
+|  |  taxa_specific_epithet(1212)_acc: 38.80%
+sound_max-level
+|  mAP: 50.47%
+|  F1-max: 55.62%
+|  ROC-AUC: 98.40%
+|  class-avg-top-1: 37.78%
+|  class-avg-top-5: 59.85%
+|  simple-top-1: 55.56%
+|  simple-top-5: 77.22%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 91.64%
+|  |  taxa_class(5)_acc: 73.04%
+|  |  taxa_order(35)_acc: 48.72%
+|  |  taxa_family(175)_acc: 45.42%
+|  |  taxa_genus(633)_acc: 41.49%
+|  |  taxa_specific_epithet(1212)_acc: 37.78%
+window-level
+|  class-avg-top-1: 26.64%
+|  class-avg-top-5: 43.79%
+|  simple-top-1: 36.84%
+|  simple-top-5: 54.26%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 87.33%
+|  |  taxa_class(5)_acc: 61.88%
+|  |  taxa_order(35)_acc: 36.47%
+|  |  taxa_family(175)_acc: 31.99%
+|  |  taxa_genus(633)_acc: 29.31%
+|  |  taxa_specific_epithet(1212)_acc: 26.64%
+
+04-20 22:08:12 | Epoch  10 | train set | LR 4.8643E-02 | Loss 4.0920 | Acc 38.27
+04-20 22:14:43 | Epoch  11 | train set | LR 4.8055E-02 | Loss 4.0554 | Acc 39.00
+04-20 22:21:19 | Epoch  12 | train set | LR 4.7366E-02 | Loss 3.9837 | Acc 40.12
+04-20 22:28:02 | Epoch  13 | train set | LR 4.6581E-02 | Loss 3.9390 | Acc 40.68
+04-20 22:35:03 | Epoch  14 | train set | LR 4.5703E-02 | Loss 3.8870 | Acc 41.36
+04-20 22:56:15 | Epoch  14 | val set | LR 4.5703E-02 | Loss 3.3425 | Acc 42.06
+04-20 22:56:15 | 
+sound_avg-level
+|  mAP: 58.48%
+|  F1-max: 62.18%
+|  ROC-AUC: 98.94%
+|  class-avg-top-1: 45.81%
+|  class-avg-top-5: 68.37%
+|  simple-top-1: 61.41%
+|  simple-top-5: 82.13%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 93.03%
+|  |  taxa_class(5)_acc: 74.47%
+|  |  taxa_order(35)_acc: 55.73%
+|  |  taxa_family(175)_acc: 52.69%
+|  |  taxa_genus(633)_acc: 49.55%
+|  |  taxa_specific_epithet(1212)_acc: 45.81%
+sound_max-level
+|  mAP: 55.44%
+|  F1-max: 59.80%
+|  ROC-AUC: 98.69%
+|  class-avg-top-1: 44.19%
+|  class-avg-top-5: 67.52%
+|  simple-top-1: 59.87%
+|  simple-top-5: 81.56%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 91.78%
+|  |  taxa_class(5)_acc: 72.99%
+|  |  taxa_order(35)_acc: 54.86%
+|  |  taxa_family(175)_acc: 51.01%
+|  |  taxa_genus(633)_acc: 48.01%
+|  |  taxa_specific_epithet(1212)_acc: 44.19%
+window-level
+|  class-avg-top-1: 31.46%
+|  class-avg-top-5: 49.56%
+|  simple-top-1: 40.64%
+|  simple-top-5: 58.03%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 88.27%
+|  |  taxa_class(5)_acc: 62.83%
+|  |  taxa_order(35)_acc: 41.33%
+|  |  taxa_family(175)_acc: 36.17%
+|  |  taxa_genus(633)_acc: 34.13%
+|  |  taxa_specific_epithet(1212)_acc: 31.46%
+
+04-20 23:03:30 | Epoch  15 | train set | LR 4.4736E-02 | Loss 3.7947 | Acc 42.41
+04-20 23:10:17 | Epoch  16 | train set | LR 4.3685E-02 | Loss 3.8180 | Acc 42.31
+04-20 23:16:44 | Epoch  17 | train set | LR 4.2555E-02 | Loss 3.7423 | Acc 43.20
+04-20 23:23:06 | Epoch  18 | train set | LR 4.1352E-02 | Loss 3.7034 | Acc 43.76
+04-20 23:29:38 | Epoch  19 | train set | LR 4.0082E-02 | Loss 3.6590 | Acc 44.59
+04-20 23:50:43 | Epoch  19 | val set | LR 4.0082E-02 | Loss 3.2613 | Acc 43.77
+04-20 23:50:43 | 
+sound_avg-level
+|  mAP: 61.36%
+|  F1-max: 64.44%
+|  ROC-AUC: 99.02%
+|  class-avg-top-1: 48.46%
+|  class-avg-top-5: 70.37%
+|  simple-top-1: 63.65%
+|  simple-top-5: 83.37%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 93.61%
+|  |  taxa_class(5)_acc: 75.80%
+|  |  taxa_order(35)_acc: 59.24%
+|  |  taxa_family(175)_acc: 56.86%
+|  |  taxa_genus(633)_acc: 52.05%
+|  |  taxa_specific_epithet(1212)_acc: 48.46%
+sound_max-level
+|  mAP: 58.05%
+|  F1-max: 61.97%
+|  ROC-AUC: 98.81%
+|  class-avg-top-1: 47.64%
+|  class-avg-top-5: 70.03%
+|  simple-top-1: 62.80%
+|  simple-top-5: 83.18%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 92.87%
+|  |  taxa_class(5)_acc: 74.66%
+|  |  taxa_order(35)_acc: 58.53%
+|  |  taxa_family(175)_acc: 55.50%
+|  |  taxa_genus(633)_acc: 50.96%
+|  |  taxa_specific_epithet(1212)_acc: 47.64%
+window-level
+|  class-avg-top-1: 33.37%
+|  class-avg-top-5: 50.96%
+|  simple-top-1: 42.38%
+|  simple-top-5: 59.40%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 89.06%
+|  |  taxa_class(5)_acc: 64.63%
+|  |  taxa_order(35)_acc: 44.26%
+|  |  taxa_family(175)_acc: 39.18%
+|  |  taxa_genus(633)_acc: 36.11%
+|  |  taxa_specific_epithet(1212)_acc: 33.37%
+
+04-20 23:57:20 | Epoch  20 | train set | LR 3.8750E-02 | Loss 3.6192 | Acc 45.02
+04-21 00:03:45 | Epoch  21 | train set | LR 3.7363E-02 | Loss 3.5800 | Acc 45.70
+04-21 00:10:18 | Epoch  22 | train set | LR 3.5929E-02 | Loss 3.5612 | Acc 45.78
+04-21 00:16:45 | Epoch  23 | train set | LR 3.4453E-02 | Loss 3.5254 | Acc 46.57
+04-21 00:23:17 | Epoch  24 | train set | LR 3.2943E-02 | Loss 3.5206 | Acc 46.53
+04-21 00:44:28 | Epoch  24 | val set | LR 3.2943E-02 | Loss 3.1475 | Acc 45.74
+04-21 00:44:28 | 
+sound_avg-level
+|  mAP: 63.20%
+|  F1-max: 65.98%
+|  ROC-AUC: 99.11%
+|  class-avg-top-1: 51.67%
+|  class-avg-top-5: 73.26%
+|  simple-top-1: 66.12%
+|  simple-top-5: 85.19%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 94.04%
+|  |  taxa_class(5)_acc: 77.50%
+|  |  taxa_order(35)_acc: 62.07%
+|  |  taxa_family(175)_acc: 58.67%
+|  |  taxa_genus(633)_acc: 55.29%
+|  |  taxa_specific_epithet(1212)_acc: 51.67%
+sound_max-level
+|  mAP: 59.52%
+|  F1-max: 63.36%
+|  ROC-AUC: 98.92%
+|  class-avg-top-1: 51.08%
+|  class-avg-top-5: 72.82%
+|  simple-top-1: 65.44%
+|  simple-top-5: 84.90%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 93.54%
+|  |  taxa_class(5)_acc: 76.90%
+|  |  taxa_order(35)_acc: 61.46%
+|  |  taxa_family(175)_acc: 58.32%
+|  |  taxa_genus(633)_acc: 54.61%
+|  |  taxa_specific_epithet(1212)_acc: 51.08%
+window-level
+|  class-avg-top-1: 35.79%
+|  class-avg-top-5: 53.18%
+|  simple-top-1: 44.26%
+|  simple-top-5: 60.93%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 89.14%
+|  |  taxa_class(5)_acc: 65.79%
+|  |  taxa_order(35)_acc: 45.64%
+|  |  taxa_family(175)_acc: 41.10%
+|  |  taxa_genus(633)_acc: 38.46%
+|  |  taxa_specific_epithet(1212)_acc: 35.79%
+
+04-21 00:51:12 | Epoch  25 | train set | LR 3.1407E-02 | Loss 3.4576 | Acc 47.59
+04-21 00:57:37 | Epoch  26 | train set | LR 2.9852E-02 | Loss 3.4466 | Acc 47.64
+04-21 01:04:13 | Epoch  27 | train set | LR 2.8285E-02 | Loss 3.4189 | Acc 48.31
+04-21 01:10:54 | Epoch  28 | train set | LR 2.6715E-02 | Loss 3.3571 | Acc 49.10
+04-21 01:17:27 | Epoch  29 | train set | LR 2.5148E-02 | Loss 3.3578 | Acc 49.34
+04-21 01:38:45 | Epoch  29 | val set | LR 2.5148E-02 | Loss 3.0308 | Acc 47.52
+04-21 01:38:45 | 
+sound_avg-level
+|  mAP: 65.72%
+|  F1-max: 68.17%
+|  ROC-AUC: 99.19%
+|  class-avg-top-1: 54.89%
+|  class-avg-top-5: 76.52%
+|  simple-top-1: 68.57%
+|  simple-top-5: 86.99%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 94.73%
+|  |  taxa_class(5)_acc: 79.28%
+|  |  taxa_order(35)_acc: 64.96%
+|  |  taxa_family(175)_acc: 62.24%
+|  |  taxa_genus(633)_acc: 58.36%
+|  |  taxa_specific_epithet(1212)_acc: 54.89%
+sound_max-level
+|  mAP: 61.74%
+|  F1-max: 65.24%
+|  ROC-AUC: 99.00%
+|  class-avg-top-1: 53.74%
+|  class-avg-top-5: 75.93%
+|  simple-top-1: 67.72%
+|  simple-top-5: 86.59%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 93.88%
+|  |  taxa_class(5)_acc: 78.77%
+|  |  taxa_order(35)_acc: 63.93%
+|  |  taxa_family(175)_acc: 61.39%
+|  |  taxa_genus(633)_acc: 57.05%
+|  |  taxa_specific_epithet(1212)_acc: 53.74%
+window-level
+|  class-avg-top-1: 37.94%
+|  class-avg-top-5: 55.45%
+|  simple-top-1: 46.17%
+|  simple-top-5: 62.68%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 90.02%
+|  |  taxa_class(5)_acc: 67.67%
+|  |  taxa_order(35)_acc: 47.93%
+|  |  taxa_family(175)_acc: 43.53%
+|  |  taxa_genus(633)_acc: 40.61%
+|  |  taxa_specific_epithet(1212)_acc: 37.94%
+
+04-21 01:46:16 | Epoch  30 | train set | LR 2.3593E-02 | Loss 3.3533 | Acc 49.18
+04-21 01:53:03 | Epoch  31 | train set | LR 2.2057E-02 | Loss 3.3016 | Acc 50.01
+04-21 01:59:46 | Epoch  32 | train set | LR 2.0547E-02 | Loss 3.2703 | Acc 50.40
+04-21 02:06:41 | Epoch  33 | train set | LR 1.9071E-02 | Loss 3.2578 | Acc 50.55
+04-21 02:14:00 | Epoch  34 | train set | LR 1.7637E-02 | Loss 3.2414 | Acc 51.00
+04-21 02:35:27 | Epoch  34 | val set | LR 1.7637E-02 | Loss 3.0127 | Acc 48.02
+04-21 02:35:27 | 
+sound_avg-level
+|  mAP: 66.04%
+|  F1-max: 68.46%
+|  ROC-AUC: 99.22%
+|  class-avg-top-1: 55.01%
+|  class-avg-top-5: 76.30%
+|  simple-top-1: 68.98%
+|  simple-top-5: 87.04%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 95.02%
+|  |  taxa_class(5)_acc: 81.81%
+|  |  taxa_order(35)_acc: 66.16%
+|  |  taxa_family(175)_acc: 62.06%
+|  |  taxa_genus(633)_acc: 58.84%
+|  |  taxa_specific_epithet(1212)_acc: 55.01%
+sound_max-level
+|  mAP: 62.10%
+|  F1-max: 65.68%
+|  ROC-AUC: 99.03%
+|  class-avg-top-1: 54.30%
+|  class-avg-top-5: 76.09%
+|  simple-top-1: 68.20%
+|  simple-top-5: 86.83%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 94.26%
+|  |  taxa_class(5)_acc: 80.33%
+|  |  taxa_order(35)_acc: 66.40%
+|  |  taxa_family(175)_acc: 61.30%
+|  |  taxa_genus(633)_acc: 58.03%
+|  |  taxa_specific_epithet(1212)_acc: 54.30%
+window-level
+|  class-avg-top-1: 38.21%
+|  class-avg-top-5: 55.43%
+|  simple-top-1: 46.68%
+|  simple-top-5: 62.95%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 90.02%
+|  |  taxa_class(5)_acc: 68.86%
+|  |  taxa_order(35)_acc: 48.52%
+|  |  taxa_family(175)_acc: 43.46%
+|  |  taxa_genus(633)_acc: 40.92%
+|  |  taxa_specific_epithet(1212)_acc: 38.21%
+
+04-21 02:42:07 | Epoch  35 | train set | LR 1.6250E-02 | Loss 3.2441 | Acc 50.67
+04-21 02:48:37 | Epoch  36 | train set | LR 1.4918E-02 | Loss 3.1841 | Acc 51.65
+04-21 02:55:09 | Epoch  37 | train set | LR 1.3648E-02 | Loss 3.1939 | Acc 51.57
+04-21 03:01:40 | Epoch  38 | train set | LR 1.2445E-02 | Loss 3.2137 | Acc 51.23
+04-21 03:08:10 | Epoch  39 | train set | LR 1.1315E-02 | Loss 3.1574 | Acc 52.43
+04-21 03:29:23 | Epoch  39 | val set | LR 1.1315E-02 | Loss 2.9930 | Acc 48.53
+04-21 03:29:23 | 
+sound_avg-level
+|  mAP: 66.90%
+|  F1-max: 69.13%
+|  ROC-AUC: 99.22%
+|  class-avg-top-1: 56.01%
+|  class-avg-top-5: 77.18%
+|  simple-top-1: 69.58%
+|  simple-top-5: 87.57%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 95.26%
+|  |  taxa_class(5)_acc: 80.31%
+|  |  taxa_order(35)_acc: 66.01%
+|  |  taxa_family(175)_acc: 63.45%
+|  |  taxa_genus(633)_acc: 59.82%
+|  |  taxa_specific_epithet(1212)_acc: 56.01%
+sound_max-level
+|  mAP: 62.36%
+|  F1-max: 65.87%
+|  ROC-AUC: 99.03%
+|  class-avg-top-1: 55.60%
+|  class-avg-top-5: 76.83%
+|  simple-top-1: 68.99%
+|  simple-top-5: 87.36%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 94.38%
+|  |  taxa_class(5)_acc: 80.57%
+|  |  taxa_order(35)_acc: 66.52%
+|  |  taxa_family(175)_acc: 62.83%
+|  |  taxa_genus(633)_acc: 59.12%
+|  |  taxa_specific_epithet(1212)_acc: 55.60%
+window-level
+|  class-avg-top-1: 38.88%
+|  class-avg-top-5: 56.06%
+|  simple-top-1: 47.15%
+|  simple-top-5: 63.38%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 90.10%
+|  |  taxa_class(5)_acc: 68.37%
+|  |  taxa_order(35)_acc: 48.77%
+|  |  taxa_family(175)_acc: 44.61%
+|  |  taxa_genus(633)_acc: 41.68%
+|  |  taxa_specific_epithet(1212)_acc: 38.88%
+
+04-21 03:36:06 | Epoch  40 | train set | LR 1.0264E-02 | Loss 3.1458 | Acc 52.29
+04-21 03:42:32 | Epoch  41 | train set | LR 9.2971E-03 | Loss 3.1438 | Acc 52.43
+04-21 03:49:00 | Epoch  42 | train set | LR 8.4189E-03 | Loss 3.1164 | Acc 52.96
+04-21 03:55:31 | Epoch  43 | train set | LR 7.6337E-03 | Loss 3.1110 | Acc 53.15
+04-21 04:02:04 | Epoch  44 | train set | LR 6.9452E-03 | Loss 3.1415 | Acc 52.29
+04-21 04:23:11 | Epoch  44 | val set | LR 6.9452E-03 | Loss 3.0091 | Acc 48.53
+04-21 04:23:11 | 
+sound_avg-level
+|  mAP: 66.90%
+|  F1-max: 69.18%
+|  ROC-AUC: 99.24%
+|  class-avg-top-1: 55.72%
+|  class-avg-top-5: 76.74%
+|  simple-top-1: 69.56%
+|  simple-top-5: 87.51%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 95.33%
+|  |  taxa_class(5)_acc: 79.96%
+|  |  taxa_order(35)_acc: 66.65%
+|  |  taxa_family(175)_acc: 62.98%
+|  |  taxa_genus(633)_acc: 59.29%
+|  |  taxa_specific_epithet(1212)_acc: 55.72%
+sound_max-level
+|  mAP: 62.51%
+|  F1-max: 66.04%
+|  ROC-AUC: 99.06%
+|  class-avg-top-1: 55.07%
+|  class-avg-top-5: 76.62%
+|  simple-top-1: 69.01%
+|  simple-top-5: 87.37%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 94.50%
+|  |  taxa_class(5)_acc: 79.47%
+|  |  taxa_order(35)_acc: 65.80%
+|  |  taxa_family(175)_acc: 61.94%
+|  |  taxa_genus(633)_acc: 58.59%
+|  |  taxa_specific_epithet(1212)_acc: 55.07%
+window-level
+|  class-avg-top-1: 38.64%
+|  class-avg-top-5: 55.74%
+|  simple-top-1: 47.14%
+|  simple-top-5: 63.33%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 90.23%
+|  |  taxa_class(5)_acc: 68.21%
+|  |  taxa_order(35)_acc: 48.72%
+|  |  taxa_family(175)_acc: 44.30%
+|  |  taxa_genus(633)_acc: 41.36%
+|  |  taxa_specific_epithet(1212)_acc: 38.64%
+
+04-21 04:29:53 | Epoch  45 | train set | LR 6.3569E-03 | Loss 3.1212 | Acc 52.95
+04-21 04:36:27 | Epoch  46 | train set | LR 5.8716E-03 | Loss 3.0755 | Acc 53.53
+04-21 04:42:56 | Epoch  47 | train set | LR 5.4917E-03 | Loss 3.0735 | Acc 53.56
+04-21 04:49:29 | Epoch  48 | train set | LR 5.2190E-03 | Loss 3.0611 | Acc 53.60
+04-21 04:55:56 | Epoch  49 | train set | LR 5.0548E-03 | Loss 3.0903 | Acc 53.45
+04-21 05:17:05 | Epoch  49 | val set | LR 5.0548E-03 | Loss 2.9800 | Acc 48.96
+04-21 05:17:05 | 
+sound_avg-level
+|  mAP: 67.36%
+|  F1-max: 69.59%
+|  ROC-AUC: 99.26%
+|  class-avg-top-1: 56.06%
+|  class-avg-top-5: 77.17%
+|  simple-top-1: 69.89%
+|  simple-top-5: 87.72%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 95.04%
+|  |  taxa_class(5)_acc: 80.00%
+|  |  taxa_order(35)_acc: 66.40%
+|  |  taxa_family(175)_acc: 62.74%
+|  |  taxa_genus(633)_acc: 59.63%
+|  |  taxa_specific_epithet(1212)_acc: 56.06%
+sound_max-level
+|  mAP: 62.96%
+|  F1-max: 66.32%
+|  ROC-AUC: 99.08%
+|  class-avg-top-1: 55.68%
+|  class-avg-top-5: 76.97%
+|  simple-top-1: 69.31%
+|  simple-top-5: 87.56%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 94.28%
+|  |  taxa_class(5)_acc: 79.82%
+|  |  taxa_order(35)_acc: 66.66%
+|  |  taxa_family(175)_acc: 62.40%
+|  |  taxa_genus(633)_acc: 59.03%
+|  |  taxa_specific_epithet(1212)_acc: 55.68%
+window-level
+|  class-avg-top-1: 39.05%
+|  class-avg-top-5: 56.15%
+|  simple-top-1: 47.56%
+|  simple-top-5: 63.62%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 89.84%
+|  |  taxa_class(5)_acc: 68.08%
+|  |  taxa_order(35)_acc: 49.08%
+|  |  taxa_family(175)_acc: 44.53%
+|  |  taxa_genus(633)_acc: 41.75%
+|  |  taxa_specific_epithet(1212)_acc: 39.05%
+
+04-21 05:17:05 | Best Val: Epoch 49, Best metrics
+04-21 05:17:05 | 
+sound_avg-level
+|  mAP: 67.36%
+|  F1-max: 69.59%
+|  ROC-AUC: 99.26%
+|  class-avg-top-1: 56.06%
+|  class-avg-top-5: 77.17%
+|  simple-top-1: 69.89%
+|  simple-top-5: 87.72%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 95.04%
+|  |  taxa_class(5)_acc: 80.00%
+|  |  taxa_order(35)_acc: 66.40%
+|  |  taxa_family(175)_acc: 62.74%
+|  |  taxa_genus(633)_acc: 59.63%
+|  |  taxa_specific_epithet(1212)_acc: 56.06%
+sound_max-level
+|  mAP: 62.96%
+|  F1-max: 66.32%
+|  ROC-AUC: 99.08%
+|  class-avg-top-1: 55.68%
+|  class-avg-top-5: 76.97%
+|  simple-top-1: 69.31%
+|  simple-top-5: 87.56%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 94.28%
+|  |  taxa_class(5)_acc: 79.82%
+|  |  taxa_order(35)_acc: 66.66%
+|  |  taxa_family(175)_acc: 62.40%
+|  |  taxa_genus(633)_acc: 59.03%
+|  |  taxa_specific_epithet(1212)_acc: 55.68%
+window-level
+|  class-avg-top-1: 39.05%
+|  class-avg-top-5: 56.15%
+|  simple-top-1: 47.56%
+|  simple-top-5: 63.62%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 89.84%
+|  |  taxa_class(5)_acc: 68.08%
+|  |  taxa_order(35)_acc: 49.08%
+|  |  taxa_family(175)_acc: 44.53%
+|  |  taxa_genus(633)_acc: 41.75%
+|  |  taxa_specific_epithet(1212)_acc: 39.05%
+
+04-21 05:40:01 | Epoch  49 | test set | LR 5.0548E-03 | Loss 3.1261 | Acc 47.03
+04-21 05:40:01 | 
+sound_avg-level
+|  mAP: 66.74%
+|  F1-max: 68.60%
+|  ROC-AUC: 99.15%
+|  class-avg-top-1: 55.28%
+|  class-avg-top-5: 76.56%
+|  simple-top-1: 67.99%
+|  simple-top-5: 86.80%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 93.58%
+|  |  taxa_class(5)_acc: 76.90%
+|  |  taxa_order(35)_acc: 65.14%
+|  |  taxa_family(175)_acc: 61.97%
+|  |  taxa_genus(633)_acc: 58.55%
+|  |  taxa_specific_epithet(1212)_acc: 55.28%
+sound_max-level
+|  mAP: 62.36%
+|  F1-max: 65.31%
+|  ROC-AUC: 98.99%
+|  class-avg-top-1: 54.76%
+|  class-avg-top-5: 76.32%
+|  simple-top-1: 67.67%
+|  simple-top-5: 86.71%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 92.89%
+|  |  taxa_class(5)_acc: 75.05%
+|  |  taxa_order(35)_acc: 64.71%
+|  |  taxa_family(175)_acc: 61.03%
+|  |  taxa_genus(633)_acc: 57.97%
+|  |  taxa_specific_epithet(1212)_acc: 54.76%
+window-level
+|  class-avg-top-1: 38.02%
+|  class-avg-top-5: 55.15%
+|  simple-top-1: 45.72%
+|  simple-top-5: 61.95%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 89.59%
+|  |  taxa_class(5)_acc: 66.16%
+|  |  taxa_order(35)_acc: 46.38%
+|  |  taxa_family(175)_acc: 43.28%
+|  |  taxa_genus(633)_acc: 40.37%
+|  |  taxa_specific_epithet(1212)_acc: 38.02%
+
+04-21 05:40:01 | With test-time geo-filtering!
+04-21 06:01:11 | Epoch  49 | val set | LR 5.0548E-03 | Loss 2.9800 | Acc 48.96
+04-21 06:01:12 | 
+sound_avg-level
+|  mAP: 67.36%
+|  F1-max: 69.59%
+|  ROC-AUC: 99.26%
+|  class-avg-top-1: 56.06%
+|  class-avg-top-5: 77.17%
+|  simple-top-1: 69.89%
+|  simple-top-5: 87.72%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 95.04%
+|  |  taxa_class(5)_acc: 80.00%
+|  |  taxa_order(35)_acc: 66.40%
+|  |  taxa_family(175)_acc: 62.74%
+|  |  taxa_genus(633)_acc: 59.63%
+|  |  taxa_specific_epithet(1212)_acc: 56.06%
+sound_max-level
+|  mAP: 62.96%
+|  F1-max: 66.32%
+|  ROC-AUC: 99.08%
+|  class-avg-top-1: 55.68%
+|  class-avg-top-5: 76.97%
+|  simple-top-1: 69.31%
+|  simple-top-5: 87.56%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 94.28%
+|  |  taxa_class(5)_acc: 79.82%
+|  |  taxa_order(35)_acc: 66.66%
+|  |  taxa_family(175)_acc: 62.40%
+|  |  taxa_genus(633)_acc: 59.03%
+|  |  taxa_specific_epithet(1212)_acc: 55.68%
+window-level
+|  class-avg-top-1: 39.05%
+|  class-avg-top-5: 56.15%
+|  simple-top-1: 47.56%
+|  simple-top-5: 63.62%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 89.84%
+|  |  taxa_class(5)_acc: 68.08%
+|  |  taxa_order(35)_acc: 49.08%
+|  |  taxa_family(175)_acc: 44.53%
+|  |  taxa_genus(633)_acc: 41.75%
+|  |  taxa_specific_epithet(1212)_acc: 39.05%
+
+04-21 06:01:12 | With test-time geo-filtering!
+04-21 06:24:47 | Epoch  49 | test set | LR 5.0548E-03 | Loss 3.1261 | Acc 47.03
+04-21 06:24:47 | 
+sound_avg-level
+|  mAP: 66.74%
+|  F1-max: 68.60%
+|  ROC-AUC: 99.15%
+|  class-avg-top-1: 55.28%
+|  class-avg-top-5: 76.56%
+|  simple-top-1: 67.99%
+|  simple-top-5: 86.80%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 93.58%
+|  |  taxa_class(5)_acc: 76.90%
+|  |  taxa_order(35)_acc: 65.14%
+|  |  taxa_family(175)_acc: 61.97%
+|  |  taxa_genus(633)_acc: 58.55%
+|  |  taxa_specific_epithet(1212)_acc: 55.28%
+sound_max-level
+|  mAP: 62.36%
+|  F1-max: 65.31%
+|  ROC-AUC: 98.99%
+|  class-avg-top-1: 54.76%
+|  class-avg-top-5: 76.32%
+|  simple-top-1: 67.67%
+|  simple-top-5: 86.71%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 92.89%
+|  |  taxa_class(5)_acc: 75.05%
+|  |  taxa_order(35)_acc: 64.71%
+|  |  taxa_family(175)_acc: 61.03%
+|  |  taxa_genus(633)_acc: 57.97%
+|  |  taxa_specific_epithet(1212)_acc: 54.76%
+window-level
+|  class-avg-top-1: 38.02%
+|  class-avg-top-5: 55.15%
+|  simple-top-1: 45.72%
+|  simple-top-5: 61.95%
+|  Taxonomy Levels
+|  |  taxa_kingdom(1)_acc: 100.00%
+|  |  taxa_phylum(2)_acc: 89.59%
+|  |  taxa_class(5)_acc: 66.16%
+|  |  taxa_order(35)_acc: 46.38%
+|  |  taxa_family(175)_acc: 43.28%
+|  |  taxa_genus(633)_acc: 40.37%
+|  |  taxa_specific_epithet(1212)_acc: 38.02%
+
